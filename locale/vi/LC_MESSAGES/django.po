@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 06:31+0000\n"
+"POT-Creation-Date: 2025-07-18 04:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,66 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: catalog/admin.py:8 catalog/admin.py:9 catalog/models.py:67
-msgid "last_name"
-msgstr ""
-
-#: catalog/admin.py:8 catalog/admin.py:9 catalog/models.py:67
-msgid "first_name"
-msgstr ""
-
-#: catalog/admin.py:8 catalog/admin.py:9
-msgid "date_of_birth"
-msgstr ""
-
-#: catalog/admin.py:8 catalog/admin.py:9
-msgid "date_of_death"
-msgstr ""
-
-#: catalog/admin.py:23
-msgid "title"
-msgstr ""
-
-#: catalog/admin.py:23
-msgid "author"
-msgstr ""
-
-#: catalog/admin.py:23
-msgid "display_genre"
-msgstr ""
-
-#: catalog/admin.py:30
-msgid "Genre"
-msgstr ""
-
-#: catalog/admin.py:35 catalog/admin.py:42
-msgid "status"
-msgstr ""
-
-#: catalog/admin.py:35 catalog/admin.py:42 catalog/models.py:53
-msgid "due_back"
-msgstr ""
-
-#: catalog/admin.py:39 catalog/admin.py:42
-msgid "fields"
-msgstr ""
-
-#: catalog/admin.py:39
-msgid "book"
-msgstr ""
-
-#: catalog/admin.py:39
-msgid "imprint"
-msgstr ""
-
-#: catalog/admin.py:39
-msgid "id"
-msgstr ""
-
-#: catalog/admin.py:41
-msgid "Availability"
-msgstr ""
 
 #: catalog/models.py:11
 msgid "Enter a book genre (e.g. Science Fiction)"
@@ -104,12 +44,54 @@ msgstr ""
 msgid "Book availability"
 msgstr ""
 
-#: catalog/models.py:64
-msgid "Died"
+#: catalog/templates/base_generic.html:6
+msgid "Local Library"
 msgstr ""
 
-#: catalog/models.py:71
-msgid "author-detail"
+#: catalog/templates/base_generic.html:20
+msgid "Home"
+msgstr "Trang chủ"
+
+#: catalog/templates/base_generic.html:21
+msgid "All books"
+msgstr "Tất cả sách"
+
+#: catalog/templates/base_generic.html:22
+msgid "All authors"
+msgstr "Tất cả tác giả"
+
+#: catalog/templates/index.html:5
+msgid "Local Library Home"
+msgstr ""
+
+#: catalog/templates/index.html:8
+msgid ""
+"Welcome to LocalLibrary, a website developed by <em>Mozilla Developer "
+"Network</em>!"
+msgstr ""
+
+#: catalog/templates/index.html:10
+msgid "Dynamic content"
+msgstr ""
+
+#: catalog/templates/index.html:12
+msgid "The library has the following record counts:"
+msgstr ""
+
+#: catalog/templates/index.html:14
+msgid "Books"
+msgstr ""
+
+#: catalog/templates/index.html:15
+msgid "Copies"
+msgstr ""
+
+#: catalog/templates/index.html:16
+msgid "Copies available"
+msgstr ""
+
+#: catalog/templates/index.html:17
+msgid "Authors"
 msgstr ""
 
 #: locallibrary/settings.py:119
