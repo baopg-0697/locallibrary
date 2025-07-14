@@ -13,3 +13,10 @@ LOAN_STATUS = (
         ('a', 'Available'),
         ('r', 'Reserved'),
     )
+
+LOAN_STATUS_M = 'm'
+LOAN_STATUS_O = 'o'
+LOAN_STATUS_A = 'a'
+LOAN_STATUS_R = 'r'
+
+NUMBER_PAGINATE_BY = 1
