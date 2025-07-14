@@ -1,0 +1,30 @@
+# Môi trường ảo
+venv/
+env/
+*/venv/
+*/env/
+
+# File cache của Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# File database
+db.sqlite3
+*.sqlite3
+
+# File chứa biến môi trường và thông tin nhạy cảm
+.env
+.env.*
+!.env.example
+
+# File media và static được người dùng tải lên
+/media/
+/staticfiles/
+
+# File của các trình soạn thảo code (IDE)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
