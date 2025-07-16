@@ -50,7 +50,7 @@ class BookInstance(models.Model):
     )
 
     class Meta:
-        ordering = [_('due_back')]
+        ordering = ['due_back']
         
     def __str__(self):
         """String for representing the Model object."""
@@ -61,14 +61,14 @@ class Author(models.Model):
     first_name = models.CharField(max_length=MAX_LENGTH_100)
     last_name = models.CharField(max_length=MAX_LENGTH_100)
     date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField(_('Died'), null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
     
     class Meta:
-        ordering = [_('last_name'), _('first_name')]
+        ordering = ['last_name', 'first_name']
         
     def get_absolute_url(self):
         """Returns the url to access a particular author instance."""
-        return reverse(_('author-detail'), args=[str(self.id)])
+        return reverse('author-detail', args=[str(self.id)])
     
     def __str__(self):
         """String for representing the Model object."""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 16:31+0700\n"
+"POT-Creation-Date: 2025-07-17 06:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,66 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: catalog/admin.py:8 catalog/admin.py:9 catalog/models.py:67
+msgid "last_name"
+msgstr ""
+
+#: catalog/admin.py:8 catalog/admin.py:9 catalog/models.py:67
+msgid "first_name"
+msgstr ""
+
+#: catalog/admin.py:8 catalog/admin.py:9
+msgid "date_of_birth"
+msgstr ""
+
+#: catalog/admin.py:8 catalog/admin.py:9
+msgid "date_of_death"
+msgstr ""
+
+#: catalog/admin.py:23
+msgid "title"
+msgstr ""
+
+#: catalog/admin.py:23
+msgid "author"
+msgstr ""
+
+#: catalog/admin.py:23
+msgid "display_genre"
+msgstr ""
+
+#: catalog/admin.py:30
+msgid "Genre"
+msgstr ""
+
+#: catalog/admin.py:35 catalog/admin.py:42
+msgid "status"
+msgstr ""
+
+#: catalog/admin.py:35 catalog/admin.py:42 catalog/models.py:53
+msgid "due_back"
+msgstr ""
+
+#: catalog/admin.py:39 catalog/admin.py:42
+msgid "fields"
+msgstr ""
+
+#: catalog/admin.py:39
+msgid "book"
+msgstr ""
+
+#: catalog/admin.py:39
+msgid "imprint"
+msgstr ""
+
+#: catalog/admin.py:39
+msgid "id"
+msgstr ""
+
+#: catalog/admin.py:41
+msgid "Availability"
+msgstr ""
 
 #: catalog/models.py:11
 msgid "Enter a book genre (e.g. Science Fiction)"
@@ -40,40 +100,24 @@ msgstr ""
 msgid "Unique ID for this particular bookacross whole library"
 msgstr ""
 
-#: catalog/models.py:41
-msgid "Book"
-msgstr ""
-
 #: catalog/models.py:49
 msgid "Book availability"
-msgstr ""
-
-#: catalog/models.py:53
-msgid "due_back"
 msgstr ""
 
 #: catalog/models.py:64
 msgid "Died"
 msgstr ""
 
-#: catalog/models.py:67
-msgid "last_name"
-msgstr ""
-
-#: catalog/models.py:67
-msgid "first_name"
-msgstr ""
-
 #: catalog/models.py:71
 msgid "author-detail"
 msgstr ""
 
-#: locallibrary/settings.py:117
-msgid "English"
+#: locallibrary/settings.py:119
+msgid "Vietnamese"
 msgstr ""
 
-#: locallibrary/settings.py:118
-msgid "Vietnamese"
+#: locallibrary/settings.py:120
+msgid "English"
 msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/contrib/messages/apps.py:16
