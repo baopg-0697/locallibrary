@@ -17,4 +17,11 @@
         <li><strong>{% trans "Authors" %}:</strong> {{ num_authors }}</li>
     </ul>
 
+    <p>
+    {% blocktrans count num_visits=num_visits %}
+    You have visited this page {{ num_visits }} time.
+    {% plural %}
+    You have visited this page {{ num_visits }} times.
+    {% endblocktrans %}
+    </p>  
 {% endblock %}
