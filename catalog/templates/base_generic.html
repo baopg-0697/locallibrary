@@ -22,7 +22,7 @@
                          <li><a href="{% url 'books' %}">{% trans "All books" %}</a></li>
                          <li><a href="{% url 'authors' %}">{% trans "All authors" %}</a></li>
                         {% if user.is_authenticated %}
-                            <li>User: {{ user.get_username }}</li>
+                            <li>{% trans "User:" %} {{ user.get_username }}</li>
                             <li><a href="{% url 'my-borrowed' %}">{% trans "My Borrowed" %}</a></li>
                             <li>
                             <form id="logout-form" method="post" action="{% url 'logout' %}">
@@ -39,14 +39,6 @@
                             <li><a href="{% url 'my-borrowed' %}">{% trans "All borrowed" %}</a></li>
                             {% if perms.catalog.add_author %}
                             <li><a href="{% url 'author-create' %}">{% trans "Create author" %}</a></li>
-                            {% endif %}
-                        {% endif %}
-                        {% if user.is_staff %}
-                        <hr>
-                            <li>Staff</li>
-                            <li><a href="{% url 'my-borrowed' %}">All borrowed</a></li>
-                            {% if perms.catalog.add_author %}
-                            <li><a href="{% url 'author-create' %}">Create author</a></li>
                             {% endif %}
                         {% endif %}
                      </ul>
