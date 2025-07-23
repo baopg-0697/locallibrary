@@ -59,6 +59,10 @@
             <strong>{% trans "Id:" %}</strong> 
             {{ copy.id }}
         </p>
+        {% if perms.catalog.can_mark_returned %}
+            <a href="{% url 'renew-book-librarian' copy.id %}">{% trans "Extend" %}</a> |
+            <a href="{% url 'url-to-return-book-view' copy.id %}">{% trans "Mark as paid" %}</a>
+        {% endif %}
         {% endfor %}
     </div>
 {% endblock %}

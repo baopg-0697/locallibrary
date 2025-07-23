@@ -1,0 +1,35 @@
+{% extends "base_generic.html" %}
+{% load i18n %}
+
+{% block content %}
+
+  {# Hiển thị lỗi xác thực nếu có #}
+  {% if form.errors %}
+    <p>{% trans "Your username and password didn't match. Please try again." %}</p>
+  {% endif %}
+
+  {# Hiển thị thông báo nếu người dùng bị chuyển hướng đến trang login #}
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>{% blocktrans %}Your account doesn't have access to this page. 
+        To proceed, please login with an account that has access.{% endblocktrans %}</p>
+    {% else %}
+      <p>{% trans "Please login to see this page." %}</p>
+    {% endif %}
+  {% endif %}
+
+  {# Form đăng nhập #}
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    
+    {# Dùng form.as_p để Django tự động render các trường trong thẻ <p> #}
+    {{ form.as_p }}
+    
+    <button type="submit" class="btn btn-primary">{% trans "Login" %}</button>
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+  {# Link quên mật khẩu #}
+  <p><a href="{% url 'password_reset' %}">{% trans "Lost password?" %}</a></p>
+
+{% endblock %}
