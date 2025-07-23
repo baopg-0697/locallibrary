@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% load i18n %}
+{% block content %}
+{% blocktrans %}<h1>Author List</h1>{% endblocktrans %}
+{% if author_list %}
+<ul>
+    {% for author in author_list %}
+    <li>
+        <a href="{{ author.get_absolute_url }}">{{ author }}</a> 
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>{% trans "There are no author in the library." %}</p>
+{% endif %}
+{% endblock %}

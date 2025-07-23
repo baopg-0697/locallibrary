@@ -20,3 +20,5 @@ LOAN_STATUS_A = 'a'
 LOAN_STATUS_R = 'r'
 
 NUMBER_PAGINATE_BY = 1
+
+INITIAL_DATE = {'date_of_death': '11/11/2023'}

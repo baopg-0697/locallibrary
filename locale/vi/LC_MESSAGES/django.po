@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-18 04:01+0000\n"
+"POT-Creation-Date: 2025-07-23 02:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: catalog/models.py:11
+#: catalog/forms.py:9
+msgid "Enter a date between now and 4 weeks (default 3)."
+msgstr ""
+
+#: catalog/forms.py:16
+msgid "Invalid date - renewal in past"
+msgstr ""
+
+#: catalog/forms.py:20
+msgid "Invalid date - renewal more than 4 weeks ahead"
+msgstr ""
+
+#: catalog/models.py:13
 msgid "Enter a book genre (e.g. Science Fiction)"
 msgstr ""
 
-#: catalog/models.py:24
+#: catalog/models.py:26
 msgid "Enter a brief description of the book"
 msgstr ""
 
-#: catalog/models.py:25
+#: catalog/models.py:27
 msgid ""
 "13 Character <a href=\"https://www.isbn-international.org/content/what-"
 "isbn\">ISBN number</a>"
 msgstr ""
 
-#: catalog/models.py:27
+#: catalog/models.py:29
 msgid "Select a genre for this book"
 msgstr ""
 
-#: catalog/models.py:40
+#: catalog/models.py:42
 msgid "Unique ID for this particular bookacross whole library"
 msgstr ""
 
-#: catalog/models.py:49
+#: catalog/models.py:51
 msgid "Book availability"
 msgstr ""
 
@@ -48,17 +60,130 @@ msgstr ""
 msgid "Local Library"
 msgstr ""
 
-#: catalog/templates/base_generic.html:20
+#: catalog/templates/base_generic.html:21
 msgid "Home"
 msgstr "Trang chủ"
 
-#: catalog/templates/base_generic.html:21
+#: catalog/templates/base_generic.html:22
 msgid "All books"
 msgstr "Tất cả sách"
 
-#: catalog/templates/base_generic.html:22
+#: catalog/templates/base_generic.html:23
 msgid "All authors"
 msgstr "Tất cả tác giả"
+
+#: catalog/templates/base_generic.html:26
+msgid "My Borrowed"
+msgstr ""
+
+#: catalog/templates/base_generic.html:30
+msgid "Logout"
+msgstr ""
+
+#: catalog/templates/base_generic.html:34 templates/registration/login.html:28
+msgid "Login"
+msgstr ""
+
+#: catalog/templates/base_generic.html:58
+#: catalog/templates/base_generic.html:62
+msgid "previous"
+msgstr ""
+
+#: catalog/templates/base_generic.html:68
+#, python-format
+msgid "Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s."
+msgstr ""
+
+#: catalog/templates/base_generic.html:74
+#: catalog/templates/base_generic.html:78
+msgid "next"
+msgstr ""
+
+#: catalog/templates/catalog/author_confirm_delete.html:6
+msgid "Delete Author:"
+msgstr ""
+
+#: catalog/templates/catalog/author_confirm_delete.html:10
+msgid "You can't delete this author until all their books have been deleted:"
+msgstr ""
+
+#: catalog/templates/catalog/author_confirm_delete.html:18
+msgid "Are you sure you want to delete the author?"
+msgstr ""
+
+#: catalog/templates/catalog/author_list.html:4
+msgid "<h1>Author List</h1>"
+msgstr ""
+
+#: catalog/templates/catalog/author_list.html:14
+msgid "There are no author in the library."
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:15
+msgid "Title:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:17
+#, fuzzy
+#| msgid "All authors"
+msgid "Author:"
+msgstr "Tất cả tác giả"
+
+#: catalog/templates/catalog/book_detail.html:22
+msgid "Summary:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:26
+msgid "ISBN:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:30
+msgid "Language:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:34
+msgid "Genre:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:50
+msgid "Due to be returned:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:55
+msgid "Imprint:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:59
+msgid "Id:"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:63
+msgid "Extend"
+msgstr ""
+
+#: catalog/templates/catalog/book_detail.html:64
+msgid "Mark as paid"
+msgstr ""
+
+#: catalog/templates/catalog/book_list.html:4
+msgid "<h1>Book List</h1>"
+msgstr ""
+
+#: catalog/templates/catalog/book_list.html:15
+msgid "There are no books in the library."
+msgstr ""
+
+#: catalog/templates/catalog/book_renew_librarian.html:6
+msgid "Due date:"
+msgstr ""
+
+#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:5
+msgid "Borrowed books"
+msgstr ""
+
+#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:17
+msgid "There are no books borrowed"
+msgstr ""
 
 #: catalog/templates/index.html:5
 msgid "Local Library Home"
@@ -94,12 +219,68 @@ msgstr ""
 msgid "Authors"
 msgstr ""
 
+#: catalog/templates/index.html:21
+#, python-format
+msgid ""
+"\n"
+"    You have visited this page %(num_visits)s time.\n"
+"    "
+msgid_plural ""
+"\n"
+"    You have visited this page %(num_visits)s times.\n"
+"    "
+msgstr[0] ""
+
 #: locallibrary/settings.py:119
 msgid "Vietnamese"
 msgstr ""
 
 #: locallibrary/settings.py:120
 msgid "English"
+msgstr ""
+
+#: templates/registration/login.html:8
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: templates/registration/login.html:14
+msgid ""
+"Your account doesn't have access to this page. \n"
+"        To proceed, please login with an account that has access."
+msgstr ""
+
+#: templates/registration/login.html:17
+msgid "Please login to see this page."
+msgstr ""
+
+#: templates/registration/login.html:33
+msgid "Lost password?"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:5
+msgid "Please enter (and confirm) your new password."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:12
+msgid "New password:"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:20
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:37
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_email.html:5
+#, python-format
+msgid ""
+"\n"
+"Someone asked for password reset for email %(email)s. Follow the link "
+"below:\n"
+"\n"
+"%(protocol)s://%(domain)s%(reset_link)s\n"
 msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/contrib/messages/apps.py:16
