@@ -41,6 +41,14 @@
                             <li><a href="{% url 'author-create' %}">{% trans "Create author" %}</a></li>
                             {% endif %}
                         {% endif %}
+                        {% if user.is_staff %}
+                        <hr>
+                            <li>Staff</li>
+                            <li><a href="{% url 'my-borrowed' %}">All borrowed</a></li>
+                            {% if perms.catalog.add_author %}
+                            <li><a href="{% url 'author-create' %}">Create author</a></li>
+                            {% endif %}
+                        {% endif %}
                      </ul>
                 {% endblock %}
                 </div>

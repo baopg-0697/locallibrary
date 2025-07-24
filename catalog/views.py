@@ -68,7 +68,13 @@ class AuthorListView(LoginRequiredMixin, generic.ListView):
     context_object_name = 'author_list'
     template_name = 'catalog/author_list.html'
     paginate_by = NUMBER_PAGINATE_BY
-    permission_required = 'catalog.view_author'
+    # permission_required = 'catalog.view_author'
+
+class AuthorDetailView(LoginRequiredMixin, generic.ListView):
+    model = Author
+    
+    permission_required = ('catalog.can_mark_returned', 'catalog.change_book')
+
     
 class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
     """Generic class-based view listing books on loan to current user."""
@@ -83,7 +89,6 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
             .order_by('due_back')
         )
     
-@login_required
 @permission_required('catalog.can_mark_returned', raise_exception=True)
 def renew_book_librarian(request, pk):
     """View function for renewing a specific BookInstance by librarian."""
@@ -151,6 +156,7 @@ class AuthorUpdate(PermissionRequiredMixin, UpdateView):
     context_object_name = 'author'
     fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
     permission_required = 'catalog.change_author'
+    template_name = 'catalog/author_form.html'
 
 class AuthorDelete(PermissionRequiredMixin, DeleteView):
     model = Author

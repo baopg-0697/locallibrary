@@ -1,11 +1,12 @@
 {% extends "base_generic.html" %}
+{% load i18n %}
 
 {% block content %}
-<form action="" method="post">
-  {% csrf_token %}
-  <table>
+  <h1>{% trans "Update Author" %}</h1>
+  
+  <form action="" method="post">
+    {% csrf_token %}
     {{ form.as_table }}
-  </table>
-  <input type="submit" value="Submit" />
-</form>
+    <input type="submit" class="btn btn-primary" value="{% trans 'Submit' %}">
+  </form>
 {% endblock %}
