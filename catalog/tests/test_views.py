@@ -57,3 +57,4 @@ class AuthorListViewTest(TestCase):
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)
         self.assertEqual(len(response.context['author_list']), 3)
+        

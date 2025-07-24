@@ -1,5 +1,5 @@
 from django.test import TestCase
-
+from catalog.constants import MAX_LENGTH_100
 from catalog.models import Author
 
 class AuthorModelTest(TestCase):
@@ -21,7 +21,7 @@ class AuthorModelTest(TestCase):
     def test_first_name_max_length(self):
         author = Author.objects.get(id=1)
         max_length = author._meta.get_field('first_name').max_length
-        self.assertEqual(max_length, 100)
+        self.assertEqual(max_length, MAX_LENGTH_100)
 
     def test_object_name_is_last_name_comma_first_name(self):
         author = Author.objects.get(id=1)
