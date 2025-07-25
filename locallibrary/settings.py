@@ -28,12 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['giabaok17.pythonanywhere.com', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ['https://giabaok17.pythonanywhere.com']
-
 
 # Application definition
 
@@ -161,18 +160,23 @@ LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# (W008) Bắt buộc chuyển hướng tất cả request HTTP sang HTTPS
+#(W008) Bắt buộc chuyển hướng tất cả request HTTP sang HTTPS
 SECURE_SSL_REDIRECT = True
 
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
 # (W012) Chỉ gửi cookie session qua kết nối HTTPS
 SESSION_COOKIE_SECURE = True
+
+X_FRAME_OPTIONS = 'DENY'
 
 # (W016) Chỉ gửi cookie CSRF qua kết nối HTTPS
 CSRF_COOKIE_SECURE = True
 
-# (W004) HSTS: Báo cho trình duyệt biết trang web chỉ nên được truy cập bằng HTTPS
-# Đây là cài đặt nâng cao, hãy đọc kỹ tài liệu trước khi bật.
-# Giá trị là số giây, ví dụ: 1 năm (31536000)
-SECURE_HSTS_SECONDS = 2592000  # Ví dụ: 30 ngày
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 31536000
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
+PREPEND_WWW = False
